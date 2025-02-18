@@ -1,1 +1,17 @@
+server:
+  port: 8080
 
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rest_with_spring_boot_rodilon?useSSL=false&useTimezone=true&serverTimezone=UTC
+    username: ${env.DB_USERNAME}
+    password: ${env.DB_PASSWORD}
+
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: update
+    show-sql: false
