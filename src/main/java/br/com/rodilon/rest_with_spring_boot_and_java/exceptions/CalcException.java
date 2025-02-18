@@ -12,7 +12,7 @@ public class CalcException {
 
     public void validateInput(String numberOne) {
         if (!calcUtils.isNumeric(numberOne)) {
-            throw new UnsupportedMathOperationException("Please, set a numeric value");
+            throw new ResourceNotFoundException("Please, set a numeric value");
         }
     }
 }
